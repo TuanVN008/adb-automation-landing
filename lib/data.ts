@@ -95,7 +95,7 @@ export const pricing = [
 
 export const faq = [
   { q: "Cần máy cấu hình thế nào?", a: "CPU 6C/12T trở lên, RAM 16GB+, SSD. Chạy đa phiên sẽ lợi nếu có iGPU/dGPU." },
-  { q: "Hỗ trợ giả lập nào?", a: "LDPlayer, BlueStacks, Andoroid Boxphone. Thêm giả lập khác có thể mở rộng theo port/deviceId." }
+  { q: "Hỗ trợ giả lập nào?", a: "LDPlayer, BlueStacks, Android Boxphone. Thêm giả lập khác có thể mở rộng theo port/deviceId." }
 ];
 
 // Video demo (YouTube)
