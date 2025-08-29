@@ -1,0 +1,26 @@
+adb-automation-landing/
+├─ package.json
+├─ next.config.mjs
+├─ tsconfig.json
+├─ postcss.config.mjs
+├─ tailwind.config.ts
+├─ .env.example
+├─ app/
+│ ├─ globals.css
+│ ├─ layout.tsx
+│ └─ page.tsx
+├─ components/
+│ ├─ Navbar.tsx
+│ ├─ Hero.tsx
+│ ├─ ValueProps.tsx
+│ ├─ Showcase.tsx
+│ ├─ Deliverables.tsx
+│ ├─ CodeTeaser.tsx
+│ ├─ Curriculum.tsx
+│ ├─ Pricing.tsx
+│ ├─ Testimonials.tsx
+│ ├─ FAQ.tsx
+│ ├─ StickyCTA.tsx
+│ └─ Footer.tsx
+└─ lib/
+└─ data.ts

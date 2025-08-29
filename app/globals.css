@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ring: 0 255 255; }
+
+html, body { height: 100%; }
+
+body {
+  @apply bg-black text-slate-100 antialiased;
+  background-image:
+    radial-gradient(1200px 800px at 50% -10%, rgba(56,189,248,0.15), transparent),
+    radial-gradient(800px 600px at 90% 10%, rgba(168,85,247,0.12), transparent),
+    radial-gradient(600px 400px at 10% 20%, rgba(14,165,233,0.12), transparent);
+}
+
+.container-max { @apply mx-auto max-w-7xl px-4; }
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold
+         ring-1 ring-cyan-400/30 bg-cyan-500/10 hover:bg-cyan-500/20 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold
+         ring-1 ring-white/20 hover:bg-white/10 transition;
+}
+
+.badge { @apply inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-xs ring-1 ring-white/15 bg-white/5; }
+.kbd { @apply rounded-md border border-white/10 bg-white/10 px-1.5 py-0.5 text-[11px]; }
+
+/* ===== HERO FX – gradient shimmer + glow + aurora blobs ===== */
+@keyframes textShimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 12px rgba(34,211,238,.55), 0 0 30px rgba(168,85,247,.35); }
+  100% { text-shadow: 0 0 24px rgba(34,211,238,.85), 0 0 60px rgba(168,85,247,.5); }
+}
+@keyframes blob {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%     { transform: translate(24px,-18px) scale(1.05); }
+  66%     { transform: translate(-20px,14px) scale(0.96); }
+}
+
+/* Text gradient + shimmer chuyển màu mượt */
+.text-gradient-shimmer{
+  background: linear-gradient(90deg,#22d3ee 0%,#a855f7 50%,#22d3ee 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textShimmer 8s linear infinite;
+}
+
+/* Viền siêu nhẹ để chữ sắc nét trên nền tối */
+.stroke-subtle { -webkit-text-stroke: 1px rgba(255,255,255,0.06); }
+
+/* Glow nhịp nhàng */
+.text-glow { animation: glowPulse 2.4s ease-in-out infinite alternate; }
+
+/* Aurora blobs (nền ánh sáng mờ) */
+.aurora-blob {
+  filter: blur(40px);
+  opacity: .55;
+  pointer-events: none;
+}
+.animate-blob { animation: blob 12s infinite; }
+
+/* ===== Gradient ring glow cho card nổi bật ===== */
+@keyframes ringGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(168,85,247,0); opacity: .45; }
+  50% { box-shadow: 0 0 40px rgba(168,85,247,.25); opacity: .9; }
+}
+.glow-ring { animation: ringGlow 3.6s ease-in-out infinite; }
