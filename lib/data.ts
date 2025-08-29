@@ -101,8 +101,8 @@ export const faq = [
 // Video demo (YouTube)
 export type DemoVideo = { title: string; url: string };
 export const demoVideos: DemoVideo[] = [
-  { title: "LDPlayer Demo Video", url: "https://www.youtube.com/watch?v=vaisRD9i-Z0&t=1s" },
-  { title: "Boxphone Demo Video", url: "https://www.youtube.com/watch?v=vaisRD9i-Z0&t=1s" }
+  { title: "LDPlayer Demo Video", url: "https://youtu.be/jdRlm7WvSYo" },
+  { title: "Boxphone Demo Video", url: "https://youtu.be/mHmF2ognKX0" }
 ];
 
 // ===== Nội dung học & Cam kết =====
