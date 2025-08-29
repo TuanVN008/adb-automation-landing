@@ -33,7 +33,7 @@ export function Hero() {
             <span className="block">
               trên giả lập với{" "}
               <span className="text-gradient-shimmer text-glow stroke-subtle whitespace-nowrap">
-                5GEN ADB AUTOMATION
+                ADB AUTOMATION
               </span>
             </span>
           </motion.h1>
